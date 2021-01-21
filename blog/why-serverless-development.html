@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139140834-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-139140834-1');
+	</script>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/android-chrome-512x512.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Dev Techs | Why Serverless Development?</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.min.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#navbar").load("../partials/navbar.html",function(){
+              addActive();
+          }); 
+          $("#footer").load("../partials/footer.html"); 
+        });
+    </script> 
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="jumbotron card card-image jumbotron-blog" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);" id="add">
+	  <div class="text-white text-center py-5 px-4">
+	    <div>
+	      <h1 class="card-title h1-responsive pt-3 mb-2 font-bold">
+	      	<strong>Why Serverless Development?</strong>
+	      </h1>
+	      <h4>Published: May 9, 2020</h4>
+	    </div>
+	  </div>
+	</div>
+    <!--Main layout-->
+    <main class="mt-5 blog-main">
+
+        <div class="container">
+
+			<!--Section: Contact v.2-->
+			<section class="mb-4 row">
+				<div class="col-md-8 col-lg-9 col-sm-12">
+          <h2 class="text-center">
+            <i>"Remember, with less responsibility comes great power."</i><br>
+            - Nobody
+          </h2>
+					<div class="blog-section-container" id="intro">
+						<h3>Intro</h3>
+						<p>
+							The big question that we need to ask before adopting new technology is why? Without getting too verbose here (because we do have the right hand menu which nicely summarizes the talking points in this article), I want to discuss why I'm so crazy for serverless.
+						</p>
+						<p>
+							I'm a big Amazon Web Services (AWS) guy. It's empowered my career and really kickstarted my ability to create the life that I've always dreamed of as a young kid. Therefore, this tutorial will utilize many technologies provided by the AWS platform. This article applies to pretty much any other platform that offers serverless technologies.
+						</p>
+            <p>
+              I am not saying that serverless is a one-size-fits-all technology. I wish, however there are many cases in which serverless would not make a good fit - maybe we can get into that another day.
+            </p>
+            <p>
+              I'm a big Amazon Web Services (AWS) guy. It's empowered my career and really kickstarted my ability to create the life that I've always dreamed of as a young kid. Therefore, this tutorial will utilize many technologies provided by the AWS platform. This article applies to pretty much any other platform that offers serverless technologies.
+            </p>
+            <p>
+              I am not saying that serverless is a one-size-fits-all technology. I wish, however there are many cases in which serverless would not make a good fit - maybe we can get into that another day.
+            </p>
+					</div>
+					<div class="blog-section-container" id="costs-savings">
+						<h4 class="section-title">Costs Savings</h4>
+						<p>
+							Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+						</p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+					</div>
+					<div class="blog-section-container" id="less-management">
+						<h4 class="section-title">Less Management</h4>
+						<p>
+							Personally, I love the idea of a serverless architecture, mainly because it decreases the amount of server and infrastructure management that I need to do. Over the years, I've learned one thing - when I have to manually manage a ton of infrastructure, it's going to eventually break. Whether there's an issue with a service crashing, like HTTPD or MySQL, or what have you. Now, the flip-side to using managed services (which is what serverless is comprised of), is that you sacrifice a lot of customizability on infrastructure. It's not so much to the point where I'm against it, however. And I am one to like having their hands on the steering wheel.
+						<p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+					</div>
+					<div class="blog-section-container" id="effortless-scaling">
+						<h4 class="section-title">Effortless Scaling</h4>
+						<p>
+							Imagine if your application could scale to a million users, and all you had to do was click a button to allow automatic scaling. This is what serverless offers. You don't have to concern yourself with configuring auto-scaling groups and worrying if your settings are working for a real life scenario.
+						</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas ante a lectus elementum, vehicula condimentum nisi sollicitudin. Nullam a faucibus justo. Pellentesque eget vulputate sem. Curabitur ultricies dapibus arcu quis rhoncus. Praesent eu dignissim dui. Morbi porttitor sem justo, faucibus scelerisque sapien congue at. Cras commodo nibh id nibh sagittis faucibus. Phasellus lobortis ultrices molestie.
+            </p>
+            <p>
+              Vivamus ut lectus porttitor, pharetra erat quis, porttitor nisi. Praesent et accumsan metus. Nullam ut malesuada mauris. Pellentesque mollis condimentum eros at eleifend. Donec eu mollis dui. Aliquam egestas lacus non faucibus pellentesque. Pellentesque dapibus et mi at convallis. Cras vel facilisis dui. Etiam semper urna sit amet justo congue, ornare pulvinar elit mollis. Donec eleifend vel dui nec consequat.
+            </p>
+            <p>
+              Donec auctor posuere mauris. Duis ultrices felis in finibus semper. Vivamus maximus vel tellus sed vehicula. Mauris sodales dolor nec enim laoreet, at finibus eros bibendum. Nulla condimentum tellus bibendum nisi tempus suscipit. Aenean non pretium risus. Aliquam mattis eget lorem vitae venenatis. Mauris aliquet, turpis non ultrices mattis, ipsum lectus maximus ex, dictum accumsan nibh nisl a nisi. Vestibulum eleifend vulputate congue. Etiam a eleifend quam. Nulla et mi faucibus, ultricies nunc vel, elementum tellus. Morbi eu nibh in nunc iaculis auctor at a diam. Sed placerat magna ac sapien laoreet suscipit.
+            </p>
+					</div>
+					<div class="blog-section-container" id="easier-development">
+						<h4 class="section-title" >Easier Development</h4>
+						<p>
+							When we use a serverless infrastructure, we're taking advantage of Infrastructure as a Service, which is fancy talk for having a lot of configurations and management handled by the service provider. 
+						</p>
+						<p>
+							Remember, with less responsibility comes great power.
+						</p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+            <p>
+              Perhaps it's best to start with the overhead costs that you save by utilizing a serverless archistructure. Going serverless can save a TON on overhead, whether it be from hardware run-time or time spent managing the infrastructure. Let's say you have a website or application that doesn't have a ton of traffic. With serverless, you don't have to have this application running 24/7 "hot" on a server. With Amazon Web Services, you're only paying for resources that are used when someone is accessing your application or app. Depending on the application you're creating, this isn't usually an issue. However, if you have something that isn't utilized a lot, it can run slower the first time a user accesses it due to background resources needing to start up. This is the downside to serverless - it runs the code "cold". 
+            </p>
+
+					</div>
+					<div class="blog-section-container" id="wrap-up">
+						<h4 class="section-title" id="wrap-up">Wrap Up</h4>
+						<p>
+							There's no denying that a lot of us nerds do things differently just because we can. This technology is still relatively new, which makes it all the more exciting when you get things working. Serverless is still a buzzword. We're still in the pretty early ages of using serverless architecture, however the benefit nowadays is that it's been tested for years. We have industry experts that can provide best practices and impart wisdom. If you understand the benefits of serverless and learn to develop for it, there's no doubt that you'll become an extremely valuable asset for any company. As with anything, there are pros and cons associated with serverless technologies. In many cases, serverless will be an amazing fit for your applications. I certainly recommend creating brochure websites using a serverless approach. If you feel inclined to begin developing a serverless application, head over to the next article!
+						</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas ante a lectus elementum, vehicula condimentum nisi sollicitudin. Nullam a faucibus justo. Pellentesque eget vulputate sem. Curabitur ultricies dapibus arcu quis rhoncus. Praesent eu dignissim dui. Morbi porttitor sem justo, faucibus scelerisque sapien congue at. Cras commodo nibh id nibh sagittis faucibus. Phasellus lobortis ultrices molestie.
+            </p>
+            <p>
+              Vivamus ut lectus porttitor, pharetra erat quis, porttitor nisi. Praesent et accumsan metus. Nullam ut malesuada mauris. Pellentesque mollis condimentum eros at eleifend. Donec eu mollis dui. Aliquam egestas lacus non faucibus pellentesque. Pellentesque dapibus et mi at convallis. Cras vel facilisis dui. Etiam semper urna sit amet justo congue, ornare pulvinar elit mollis. Donec eleifend vel dui nec consequat.
+            </p>
+            <p>
+              Donec auctor posuere mauris. Duis ultrices felis in finibus semper. Vivamus maximus vel tellus sed vehicula. Mauris sodales dolor nec enim laoreet, at finibus eros bibendum. Nulla condimentum tellus bibendum nisi tempus suscipit. Aenean non pretium risus. Aliquam mattis eget lorem vitae venenatis. Mauris aliquet, turpis non ultrices mattis, ipsum lectus maximus ex, dictum accumsan nibh nisl a nisi. Vestibulum eleifend vulputate congue. Etiam a eleifend quam. Nulla et mi faucibus, ultricies nunc vel, elementum tellus. Morbi eu nibh in nunc iaculis auctor at a diam. Sed placerat magna ac sapien laoreet suscipit.
+            </p>
+					</div>
+				</div>
+				<div class="mb-4 col-md-4 col-lg-3 col-sm-12 right-menu-container">
+				    <nav class="nav flex-column lighten-4 py-4 font-weight-bold right-menu">
+				      <a class="nav-link nav-link-blog active-inner" href="#intro">Intro</a>
+				      <a class="nav-link nav-link-blog" href="#costs-savings">Costs Savings</a>
+				      <a class="nav-link nav-link-blog" href="#less-management">Less Management</a>
+				      <a class="nav-link nav-link-blog" href="#effortless-scaling">Effortless Scaling</a>
+				      <a class="nav-link nav-link-blog" href="#easier-development">Easier Development</a>
+				      <a class="nav-link nav-link-blog" href="#wrap-up">Wrap Up</a>
+				    </nav>
+				</div>
+
+
+				     <!--Section: More-->
+    <hr class="my-5">
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn container">
+
+        <!--Grid row-->
+        <div class="row" style="margin-top: 120px;">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg" class="img-fluid z-depth-1-half" alt="">
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h3 class="h3 mb-3">Web Design for 2020 - PDF eBook</h3>
+            <p>This free eBook I've written illustrates the fundamentals to modern web development in the year 2020. I sincerely hope you enjoy it. Thank you.</p>
+            <!-- Main heading -->
+
+            <hr>
+
+            <ul>
+              <li>Creating streamlined websites from templates</li>
+              <li>Containerizing Applications</li>
+              <li>Creating a pipeline</li>
+              <li>And more!</li>
+            </ul>
+
+            <!-- CTA -->
+            <!-- Default auto-sizing form -->
+
+
+            <!-- Begin Mailchimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+	            <form action="https://gmail.us18.list-manage.com/subscribe/post?u=28b73371f64b6fffc3e185088&amp;id=e7aa48c822" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	                <div id="mc_embed_signup_scroll" class="float-left">
+	              
+	              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+	                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_28b73371f64b6fffc3e185088_e7aa48c822" tabindex="-1" value=""></div>
+	                <div class="clear"><input type="submit" value="Get eBook" name="subscribe" id="mc-embedded-subscribe" class="button btn-primary"></div>
+	                </div>
+	            </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+      <!--Section: Main info-->
+
+
+
+
+			</section>
+			<!--Section: Contact v.2-->
+
+                <h3 style="margin-top: 60px;">Other Insanely Cool Articles:</h3>
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-xl-4 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="https://s3-us-west-2.amazonaws.com/www.perez.io/img/creating-serverless-pipeline-ad.png" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-xl-4 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="https://s3-us-west-2.amazonaws.com/www.perez.io/img/2020-web-tools-purple.png" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--End of Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+
+            </section>
+            <!--Section: Cards-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <div id="footer"> </div>
+    <!-- Custom Jquery code-->
+    <script type="text/javascript" src="../js/custom.js"></script>
+    <script type="text/javascript" src="../js/lambda-email.js"></script>
+    <!-- -->
+</body>
+
+</html>

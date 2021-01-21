@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139140834-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-139140834-1');
+    </script>
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
+    <link rel="shortcut icon" type="image/png" sizes="512x512" href="/img/android-chrome-512x512.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Dev Techs | Contact</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#navbar").load("/partials/navbar.html",function(){
+              addActive();
+          }); 
+          $("#footer").load("/partials/footer.html");
+          $("#articles").load("/partials/articles.html");
+        });
+    </script> 
+    <style type="text/css">
+        .purple-text {
+            color: #974F87;
+        }
+        .blue-text {
+            color: rgb(0,155,255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <!--Main Navigation-->
+    <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+      <div class="text-white text-center py-5 px-4">
+        <div>
+          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Your Next Project, A Click Away</strong></h2>
+          <h4 class="mx-5 mb-5">Let's create something beautiful
+          </h4>
+        </div>
+      </div>
+    </div>
+    <!--Main layout-->
+    <main class="mt-5 pt-5">
+        <div class="container">
+            <!--Section: Contact v.2-->
+            <section class="mb-4">
+                <!--Section heading-->
+                <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
+                <!--Section description-->
+                <p class="text-center w-responsive mx-auto mb-5">If you'd like a free consultation, please leave your number as well as the best time(s) to call you. I will reach out ASAP - usually within 48 hours. Whether you have questions or need a quote, please don't hesitate to contact me right away! I'm looking forward to working with you and your team!</p>
+                <div class="row my-5">
+                    <!--Grid column-->
+                    <div class="col-md-9 mb-md-0 mb-5">
+                        <form id="contact-form" method="post">
+                            <!--Grid row-->
+                            <div class="row">
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="sender-name" name="sender-name" class="form-control">
+                                        <label for="messageSender" class="">Your name</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="from-address" name="from-address" class="form-control">
+                                        <label for="fromAddress" class="">Your email</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+                            </div>
+                            <!--Grid row-->
+                            <!--Grid row-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="message-subject" name="message-subject" class="form-control">
+                                        <label for="messageSubject" class="">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+                            <!--Grid row-->
+                            <div class="row">
+                                <!--Grid column-->
+                                <div class="col-md-12">
+                                    <div class="md-form">
+                                        <textarea type="text" id="message-body" name="message-body" rows="2" class="form-control md-textarea"></textarea>
+                                        <label for="messageBody">Your message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+                        </form>
+                        <div class="text-center text-md-left">
+                            <a class="btn btn-blue" id="send-email-button" onClick="submitToAPI(event)">Send</a>
+                        </div>
+                        <div class="status"></div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Right-hand icons-->
+                    <div class="col-md-3 text-center">
+                        <ul class="list-unstyled mb-0">
+                            <!--li><i class="blue-text fas fa-map-marker-alt fa-2x"></i>
+                                <p>A California native, living somewhere on spaceship earth.</p>
+                            </li>
+
+                            <li><i class="blue-text fas fa-phone mt-4 fa-2x"></i>
+                                <p>+1(213)675-9459</p>
+                            </li-->
+
+                            <li><i class="blue-text fas fa-envelope mt-4 fa-2x"></i>
+                                <p><a style="color: #212529;" href="mailto:thedevtechs@gmail.com">thedevtechs@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+
+            </section>
+            <!--Articles section-->
+            <div id="articles"></div>
+            <!--Articles section-->
+                    
+    </main>
+    <!--Main layout-->
+
+    <div id="footer"> </div>
+    <!-- Custom Jquery code-->
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="text/javascript" src="/js/lambda-email.js"></script>
+    <!-- -->
+</body>
+
+</html>

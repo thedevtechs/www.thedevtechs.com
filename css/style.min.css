@@ -1,0 +1,54 @@
+.btn-blue{background-color:rgb(0,155,255);border-radius: 6px;}, border-radius: 50px;},.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:rgb(0,155,255);}@media only screen and (max-width:768px){.navbar{background-color:rgb(0,155,255);}}/* Single post page */
+.purple-text {
+    color: #974F87;
+}
+.blue-text {
+    color: rgb(0,155,255);
+}
+.section-title {
+}
+.right-menu-container {
+  padding-left: 45px;
+}
+.right-menu{
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.15);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 80px;
+}
+.right-menu .nav-link {
+  color: #212529;
+  font-weight: 300;
+}
+.right-menu .active-inner {
+  color: rgb(0,155,255) !important;
+}
+
+.blog-section-container {
+  padding: 30px 0px;
+}
+.dropdown-item:active {
+  background-color:#974F87 !important;
+}
+.spinner-grow {
+  position: absolute;
+  top: 30%;
+}
+.carousel,
+.carousel-item,
+.carousel-item.active {
+  height: 90%;
+}
+.carousel-inner {
+  height: 90%;
+}
+
+.btn-slide {
+  margin: 30px 0px 0px 0px;
+}
+.purple-text {
+  color: #974F87;
+}
+.blue-background {
+  background-color: rgb(0,155,255);
+}

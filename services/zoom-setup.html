@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139140834-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-139140834-1');
+    </script>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Dev Techs | Zoom Setup</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="/css/style.min.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#navbar").load("/partials/navbar.html",function(){
+              addActive();
+          }); 
+          $("#footer").load("/partials/footer.html"); 
+          $("#ebook").load("/partials/CTA-ebook.html");
+          $("#articles").load("/partials/articles.html");
+        });
+    </script> 
+    <style type="text/css">
+        .purple-text {
+            color: #974F87;
+        }
+        .blue-text {
+            color: rgb(0,155,255);
+        }
+    </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+    <!--Main Navigation-->
+  <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+    <div class="text-white text-center py-5 px-4">
+      <div class="py-5">
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Zoom Setup</strong></h2>
+      </div>
+    </div>
+  </div>
+  <!--Main layout-->
+  <main class="mt-5 pt-5">
+      <div class="container">
+      <!--Section: Content-->
+        <section class="dark-grey-text">
+          <div class="row">
+            <div class="col-md-5 d-flex align-items-center text-center">
+              <div>
+                <h3 class="font-weight-bold mb-4">Run your business via Zoom</h3>
+                  <p>
+                    Zoom allows you to conduct 1 – 2 – 1 & group video chats online for free! If you are running a class, a consulting business, coaching business or any type of business where you are required to communicate with your customers regularly, then Zoom is a must.
+                  </p>
+                  <p>
+                    We will setup the entire platform for you, giving you more time to do what you do best, focus on delivery a great service to your customers.
+                  </p>
+                  <p>
+                    You can expand traditional classes & consultations with video communications to meet the needs of your customers. Utilize resources and hardware you already have to expand your capabilities and offerings.
+                  </p>
+                  <p>
+                    Zoom can help increase customer participation and retention with virtual and hybrid classes, consultations, meetings and more.
+                  </p>
+                  <a href="/contact.html"><button type="button" class="btn btn-blue btn-rounded mx-0">Book Free Consultation Call</button></a>
+              </div>
+            </div>
+            <div class="col-md-7 mb-4 d-flex align-items-center justify-content-center">
+              <div class="view">
+                <img src="/img/Zoom-Blue.png" class="img-fluid" alt="smaple image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Section: Content-->  
+        
+        <!--ebook signup section-->
+        <div id="ebook"></div>
+        <!--ebook signup section-->
+        <!--Articles section-->
+        <div id="articles"></div>
+        <!--Articles section-->
+      </div>
+    </section>
+    <!--Section: Cards-->
+  </div>
+</main>
+  <!--Main layout-->
+  <div id="footer"> </div>
+</body>
+</html>

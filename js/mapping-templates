@@ -1,0 +1,7 @@
+{
+  "toAddress": "$input.params('toAddress')",
+  "fromAddress": "$input.params('fromAddress')",
+  "messageBody": "$input.params('messageBody')",
+  "messageSubject": "$input.params('messageSubject')",
+  "senderName": "$input.params('senderName')"
+}

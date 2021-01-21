@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139140834-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-139140834-1');
+	</script>
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="180x180" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/img/android-chrome-512x512.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Dev Techs | Creating A Serverless Pipeline</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.min.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#navbar").load("../partials/navbar.html",function(){
+              addActive();
+          }); 
+          $("#footer").load("../partials/footer.html"); 
+        });
+    </script> 
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="jumbotron card card-image jumbotron-blog" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);" id="add">
+	  <div class="text-white text-center py-5 px-4">
+	    <div>
+	      <h1 class="card-title h1-responsive pt-3 mb-2 font-bold">
+	      	<strong>Creating A Serverless Pipeline</strong>
+	      </h1>
+	      <h4>Published: May 10, 2020</h4>
+	    </div>
+	  </div>
+	</div>
+    <!--Main layout-->
+    <main class="mt-5 blog-main">
+
+        <div class="container">
+
+			<!--Section: Contact v.2-->
+			<section class="mb-4 row">
+				<div class="col-md-8 col-lg-9 col-sm-12">
+					<div class="blog-section-container" id="intro">
+						<h3>Intro</h3>
+						<p>
+							If you're reading this tutorial, then you should already be convinced that a serverless architecture is the right fit for the application you're building, or you understand the benefits of serverless and you want to test a deployment out. If you're looking to get familiarized with and buttered by the suavness that is serverless development, read my article <a href="blog/why-serverless-development.html">Why Serverless Development?.</a>
+						</p>
+						<p>
+							Please note that this is not an exhaustive or extensive explanation or tutorial on any of these technologies! If this tutorial piques your interest in any of the technologies used, I highly encourage you to read more of my articles to start messing around with them. Certainly all of them will be of use to you in your career. I wouldn't spend my time learning and writing about these technologies if I didn't think they provided great value to the community.
+						</p>
+						<p>
+							Each of the technologies that we are using to build our pipeline certainly have books dedicated to them. This tutorial is not intended to be extensive nor exhaustive review of any tool, but rather its purpose is to provide context as to how we will use them for this lab.
+						<p><br>
+						<h5>Tools You Will Need To Follow This Tutorial:</h5>
+						<ul>
+							<li><strong>A BASH terminal</strong></li>
+							<li><a href="https://github.com" target="_blank"><strong>GitHub</a></strong> installed</li>
+							<li><strong>A web application</strong> - which can be as simple as an index.html file. We will be using the <a href="https://mdbootstrap.com/freebies/" target="_blank">Material Design Template</a>, which uses the Bootstrap framework. More on both technologies in their respective sections.</li>
+							<li><strong>An Amazon Web Services account</strong> with access to the following services:
+								<ul>
+									<li>IAM</li>
+									<li>Lambda</li>
+									<li>S3</li>
+									<li>Route 53 - if you want to fully utilize hosting through AWS
+									</li>
+									<li>More depending on what application you're creating</li>
+								</ul>
+						</ul>
+					</div>
+					<div class="blog-section-container" id="using-github">
+						<h4 class="section-title">Deploying a Git Project</h4>
+						<p>
+							We're going pro here guys. We're not going to just download the template from the internet in a zip file, unzip the project, create a folder workspace. No. We're going to use GitHub to have a code repository, because we're pro and we want to track changes in our code.
+						</p>
+						<p>
+							We're going pro here guys. We're not going to just download the template from the internet in a zip file, unzip the project, create a folder workspace. No. We're going to use GitHub to have a code repository, because we're pro and we want to track changes in our code.
+						</p>
+						<p>
+							We're going pro here guys. We're not going to just download the template from the internet in a zip file, unzip the project, create a folder workspace. No. We're going to use GitHub to have a code repository, because we're pro and we want to track changes in our code.
+						</p>
+						<p>
+							We're going pro here guys. We're not going to just download the template from the internet in a zip file, unzip the project, create a folder workspace. No. We're going to use GitHub to have a code repository, because we're pro and we want to track changes in our code.
+						</p>
+						<p>
+							We're going pro here guys. We're not going to just download the template from the internet in a zip file, unzip the project, create a folder workspace. No. We're going to use GitHub to have a code repository, because we're pro and we want to track changes in our code.
+						</p>
+					</div>
+					<!-- div class="blog-section-container" id="working-locally-with-docker">
+						<h4 class="section-title">Working Locally With Docker</h4>
+						<p>
+							<strong>Question:</strong> Wait, what? If Im just working locally with a static website, then why oh why would I want to use Docker?
+						</p>
+						<p>
+							<strong>Answer 1:</strong> I've found that there are many cases where JavaScript doesn't run correctly if you're not running the code on top of a web server.
+						</p>
+						<p>
+							<strong>Answer 2:</strong> If the intention of this website is to provide you with up-to-date tools for web development, I want to have all tutorials provide a good strong foundation. Therefore, I feel strongly that Docker should be incorporated into every developers toolbelt, especially those who handle system admistration or oversee any code deployment.
+						</p>
+						<p>
+							Now, if there are no more questions, let's get onto the hands-on section of deploying our container.
+						</p>
+						<h5 class="blog-section-container">Creating A Docker Compose File</h5>
+						<h5 class="blog-section-container">Deploying Our Docker Container With A Bind Mount</h5>
+						<h5 class="blog-section-container">Wrap Up</h5>
+					</div -->
+					<div class="blog-section-container" id="hosting-our-website-with-s3">
+						<h4 class="section-title">Hosting Our Website With S3</h4>
+						<h5>Intro</h5>
+						<p>To start off, we will need to have an <a href="https://aws.amazon.com/" target="_blank">Amazon Web Services (AWS)</a> account. AWS is a cloud service provider that we will be utilizing infrastructure from to create our application.</p>
+						<p>
+							Because we have a "static" website, or a wesbite that doesn't rely on server side coding, we can host the site through AWS's S3, or Simple Storage Service.
+						<p>
+						<p>
+							Imagine if your application could scale to a million users, and all you had to do was click a button to allow automatic scaling. This is what serverless offers. You don't have to concern yourself with configuring auto-scaling groups and worrying if your settings are working for a real life scenario. Gone...are the days of waking up at 2 a.m. to an enraged client telling you their site is down.
+						</p>
+					</div>
+					<div class="blog-section-container" id="effortless-scaling">
+						<h4 class="section-title">Creating Our Script to Push Changes to Environments</h4>
+						<p>
+							This will also be the first step in creating in our pipeline to push code from out localhost environment to staging or production. We want to create a BASH script so that we can repeatably run a command that we will be using a lot in an easy way.
+						</p>
+						<h5>Create sync-to-s3-live-site.sh File</h5>
+						<p>
+							Make sure you're in your terminal, and then create a file with the .sh extension to begin coding for the BASH language. I like to use the Nano text editor. Once you're in your file, copy and paste the following code:
+						<br>
+						<code>
+							#!/bin/bash/
+							aws s3 sync $PWD s3://YOUR-BUCKET-NAME/ --acl public-read
+						</code></p>
+						<h5>Our Code Explained</h5>
+						<p>
+							Even for those unfamiliar with BASH or the AWS command line, the code in our script should be pretty straight-forward to understand. The first line declares the language to be used for this script. The second line is the actual code, which can also be copy/pasted into your terminal window. It uses the Amazon Web Services command to tell the Simple Storage Service that we want to copy our code from the local machine to the S3 bucket that we created earlier. We set it with public-read permissions so that anyone visiting our website can have access to view it.
+						</p>
+						<br><br>
+						<h5>Testing Our Script Out</h5>
+						<p>
+							We can test this script out by adding the execute permission to the file. In your terminal, type:
+							<br>
+							<code>sudo chmod +x sync-to-s3-live-site.sh</code>
+							<br><br>
+							After you've run the command above and the file has the correct permissions, you can then type the following to execute the file:
+							<br>
+							<code>./sync-to-s3-live-site.sh</code>
+						<p>
+						<p>
+						If you've set your information correctly in the script and are in the same directory as your web application, then you should have successfully uploaded your site to S3. The output will look similar to the screenshot below.
+						</p>
+						<img src="/img/serverless-pipeline-article/successful-sync.png">
+					</div>
+					<div class="blog-section-container" id="everything-in-action">
+						<h4 class="section-title">Everything In Action</h4>
+						<p>
+							Okay. Now that we have everything setup, let's run a deployment from A to Z. Go into the index.html file and change the title tag of your site to something different.
+						</p>
+						<h5 class="blog-section-container">Updating Our Application</h5>
+						<p>
+							Remember, with less responsibility comes great power.
+						</p>
+					</div>
+					<div class="blog-section-container" id="wrap-up">
+						<h4 class="section-title" id="wrap-up">Wrap Up</h4>
+						<p>
+							We've achieved a seriously cool thing here! Keep in mind that there are many ways to deploy a static sites and other platforms to code your sites on top of. We've chosen an universal code base that can extend beyond a serverless architecture and is familiar to many developers.
+						</p>
+						<p>
+							We've achieved a seriously cool thing here! Keep in mind that there are many ways to deploy a static sites and other platforms to code your sites on top of. We've chosen an universal code base that can extend beyond a serverless architecture and is familiar to many developers.
+						</p>
+						<p>
+							If you enjoyed this tutorial, consider donating to our Patreon to keep more great tutorials coming!
+						</p>
+					</div>
+				</div>
+				<div class="mb-4 col-md-4 col-lg-3 col-sm-12 right-menu-container">
+				    <nav class="nav flex-column lighten-4 py-4 font-weight-bold right-menu">
+				      <a class="nav-link nav-link-blog active-inner" href="#intro">Intro</a>
+				      <a class="nav-link nav-link-blog" href="#using-github">Using a Git Repository</a>
+				      <a class="nav-link nav-link-blog" href="#hosting-our-website-with-s3">Hosting Our Website With S3</a>
+				    <!--   <a class="nav-link nav-link-blog" href="#working-locally-with-docker">Working Locally With Docker</a> -->
+				      <a class="nav-link nav-link-blog" href="#effortless-scaling">Creating Our Script to Push Changes to Environments</a>
+				      <a class="nav-link nav-link-blog" href="#everything-in-action">Everything In Action</a>
+				      <a class="nav-link nav-link-blog" href="#wrap-up">Wrap Up</a>
+				    </nav>
+				</div>
+
+
+				     <!--Section: More-->
+    <hr class="my-5">
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn container">
+
+        <!--Grid row-->
+        <div class="row" style="margin-top: 120px;">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg" class="img-fluid z-depth-1-half" alt="">
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h3 class="h3 mb-3">Web Design for 2020 - PDF eBook</h3>
+            <p>This free eBook I've written illustrates the fundamentals to modern web development in the year 2020. I sincerely hope you enjoy it. Thank you.</p>
+            <!-- Main heading -->
+
+            <hr>
+
+            <ul>
+              <li>Creating streamlined websites from templates</li>
+              <li>Containerizing Applications</li>
+              <li>Creating a pipeline</li>
+              <li>And more!</li>
+            </ul>
+
+            <!-- CTA -->
+            <!-- Default auto-sizing form -->
+
+
+            <!-- Begin Mailchimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+	            <form action="https://gmail.us18.list-manage.com/subscribe/post?u=28b73371f64b6fffc3e185088&amp;id=e7aa48c822" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	                <div id="mc_embed_signup_scroll" class="float-left">
+	              
+	              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+	                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_28b73371f64b6fffc3e185088_e7aa48c822" tabindex="-1" value=""></div>
+	                <div class="clear"><input type="submit" value="Get eBook" name="subscribe" id="mc-embedded-subscribe" class="button btn-primary"></div>
+	                </div>
+	            </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+      <!--Section: Main info-->
+
+
+
+
+			</section>
+			<!--Section: Contact v.2-->
+
+                <h3 style="margin-top: 60px;">Other Insanely Cool Articles:</h3>
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-xl-4 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="https://s3-us-west-2.amazonaws.com/www.perez.io/img/creating-serverless-pipeline-ad.png" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-xl-4 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="https://s3-us-west-2.amazonaws.com/www.perez.io/img/2020-web-tools-purple.png" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--End of Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+
+            </section>
+            <!--Section: Cards-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <div id="footer"> </div>
+    <!-- Custom Jquery code-->
+    <script type="text/javascript" src="../js/custom.js"></script>
+	<script type="text/javascript" src="../js/lambda-email.js"></script>	
+    <!-- -->
+</body>
+
+</html>
