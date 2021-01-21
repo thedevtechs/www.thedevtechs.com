@@ -39,6 +39,10 @@ body,
 .page-footer {
   background-color: #1C2331; }
 
+.btn {
+  border-radius: 6px !important;
+}
+
 .btn-blue{
   background-color:rgb(0,155,255);
   border-radius: 6px;
